@@ -1,0 +1,101 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.3">
+  <diagram name="페이지-1" id="S-M87Str4raXCMNnzBrW">
+    <mxGraphModel dx="1240" dy="662" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cloud" parent="1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;container=1;pointerEvents=0;" value="AWS Cloud" vertex="1">
+          <mxGeometry height="622" width="892" x="258" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_cicd" parent="cloud" style="text;html=1;fontSize=13;fontStyle=1;fontColor=#C7131F;align=left;verticalAlign=middle;whiteSpace=wrap;" value="CI/CD Pipeline" vertex="1">
+          <mxGeometry height="29.15625" width="126.04347826086956" x="29.08695652173913" y="29.15625" as="geometry" />
+        </mxCell>
+        <mxCell id="pipeline" parent="cloud" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=none;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.codepipeline;" value="CodePipeline" vertex="1">
+          <mxGeometry height="45.23021739130435" width="45.23021739130435" x="96.95652173913044" y="68.03125" as="geometry" />
+        </mxCell>
+        <mxCell id="build" parent="cloud" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=none;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.codebuild;" value="CodeBuild&lt;br&gt;(Docker Build)" vertex="1">
+          <mxGeometry height="45.23021739130435" width="45.23021739130435" x="358.73913043478257" y="68.03125" as="geometry" />
+        </mxCell>
+        <mxCell id="ecr" parent="cloud" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=none;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecr;" value="ECR" vertex="1">
+          <mxGeometry height="45.23021739130435" width="45.23021739130435" x="623.4304347826087" y="68.03125" as="geometry" />
+        </mxCell>
+        <mxCell id="divider" parent="cloud" style="shape=line;strokeColor=#CCCCCC;strokeWidth=1;dashed=1;dashPattern=4 4;html=1;" value="" vertex="1">
+          <mxGeometry height="0.971875" width="833.8260869565217" x="29.08695652173913" y="194.375" as="geometry" />
+        </mxCell>
+        <mxCell id="ecs_cluster" parent="cloud" style="swimlane;startSize=28;fillColor=none;strokeColor=#ED7100;fontColor=#ED7100;fontSize=12;fontStyle=1;html=1;container=1;pointerEvents=0;collapsible=0;rounded=1;arcSize=6;" value="ECS Cluster" vertex="1">
+          <mxGeometry height="330.4375" width="363.5869565217391" x="446" y="252.6875" as="geometry" />
+        </mxCell>
+        <mxCell id="ecs_svc" parent="ecs_cluster" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=none;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;" value="ECS Service" vertex="1">
+          <mxGeometry height="45.23021739130435" width="45.23021739130435" x="164.82608695652172" y="43.734375" as="geometry" />
+        </mxCell>
+        <mxCell id="alb" parent="cloud" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=none;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;" value="ALB&lt;br&gt;(HTTP:80)" vertex="1">
+          <mxGeometry height="45.23021739130435" width="45.23021739130435" x="95.98695652173913" y="429.56875" as="geometry" />
+        </mxCell>
+        <mxCell id="tg_blue" parent="cloud" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;fontStyle=1;arcSize=30;" value="Blue TG" vertex="1">
+          <mxGeometry height="34.987500000000004" width="96.95652173913044" x="267.59999999999997" y="422.765625" as="geometry" />
+        </mxCell>
+        <mxCell id="tg_green" parent="cloud" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;fontStyle=1;arcSize=30;" value="Green TG" vertex="1">
+          <mxGeometry height="34.987500000000004" width="96.95652173913044" x="270.5086956521739" y="504.40312500000005" as="geometry" />
+        </mxCell>
+        <mxCell id="fargate_a" parent="cloud" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=none;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;" value="Fargate Tasks (A)" vertex="1">
+          <mxGeometry height="45.23021739130435" width="45.23021739130435" x="537.1391304347826" y="416.93437500000005" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="cloud" source="ecs_svc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ED7100;strokeWidth=1;dashed=1;dashPattern=4 4;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fargate_a" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fargate_b" parent="cloud" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=none;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;" value="Fargate Tasks (B)" vertex="1">
+          <mxGeometry height="45.23021739130435" width="45.23021739130435" x="679.6652173913043" y="416.93437500000005" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="cloud" source="ecs_svc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ED7100;strokeWidth=1;dashed=1;dashPattern=4 4;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fargate_b" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note_swap" parent="cloud" style="text;html=1;fontSize=10;fontColor=#999999;align=center;verticalAlign=middle;whiteSpace=wrap;fontStyle=2;" value="※ 배포마다 Blue TG ↔ Green TG 역할이 교대됨" vertex="1">
+          <mxGeometry height="29.15625" width="252.08695652173913" x="270.5086956521739" y="461.640625" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="cloud" source="alb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=2;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tg_blue" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="cloud" source="alb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D6B656;strokeWidth=2;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tg_green" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="cloud" source="tg_blue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fargate_a" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="cloud" source="tg_green" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D6B656;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fargate_b" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="637.9739130434782" y="521.896875" />
+              <mxPoint x="637.9739130434782" y="446.09062500000005" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="github" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#232F3E;strokeColor=#232F3E;fontSize=12;fontStyle=1;arcSize=20;strokeWidth=1.5;" value="GitHub" vertex="1">
+          <mxGeometry height="48" width="100" x="100" y="88.03" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="github" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#232F3E;strokeWidth=1.5;fontSize=10;fontColor=#666666;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pipeline" value="Source">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="pipeline" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#232F3E;strokeWidth=1.5;fontSize=10;fontColor=#666666;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="build" value="Build">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="build" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#232F3E;strokeWidth=1.5;fontSize=10;fontColor=#666666;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ecr" value="Push Image">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="pipeline" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C7131F;strokeWidth=2;fontSize=11;fontColor=#C7131F;fontStyle=1;dashed=1;dashPattern=8 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ecs_svc" value="Deploy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="ecr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ED7100;strokeWidth=1.5;fontSize=10;fontColor=#ED7100;dashed=1;dashPattern=8 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ecs_cluster" value="Pull Image">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tYlaps1oQH7WsH_SHv98-1" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3E;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;" value="User" vertex="1">
+          <mxGeometry height="56.537771739130434" width="56.537771739130434" x="125.00217391304349" y="443.9175" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="tYlaps1oQH7WsH_SHv98-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#232F3E;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="alb" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="145.5304347826087" y="409.721875" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
